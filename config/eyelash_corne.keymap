@@ -30,6 +30,8 @@
     quick-tap-ms = <150>;
 };
 
+&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>; };
+
 / {
     behaviors {
         td0: td0 {
