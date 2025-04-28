@@ -199,30 +199,30 @@ layers:
   sym:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Sft+}
-  - Sft+{
+  - '}'
+  - '{'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Sft+!
+  - '!'
   - {t: '''', s: '"'}
   - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Sft+)
-  - {t: Sft+(, type: held}
+  - )
+  - {t: (, type: held}
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Sft+<
+  - <
   - {t: '-', s: _}
   - {t: '=', s: +, type: held alternate}
-  - Sft+>
+  - '>'
   - {t: ;, s: ':'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -234,9 +234,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Sft+_
-  - Sft+"
-  - Sft+?
+  - _
+  - '"'
+  - '?'
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -294,3 +294,16 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [17, 3]
+  k: (
+- p: [23, 9]
+  k: )
+- p: [17, 14]
+  k: '{'
+- p: [23, 26]
+  k: '}'
+- p: [17, 23]
+  k: {t: '''', s: '"'}
+- p: [16, 24]
+  k: '"'
