@@ -313,6 +313,3 @@ combos:
 - p: [16, 24]
   k: '"'
   l: [colemak]
-- p: [43, 44]
-  k: $$mdi:alpha-w-box$$
-  l: [colemak]
