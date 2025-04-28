@@ -20,7 +20,7 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <2000>;
+    time-to-max-speed-ms = <600>;
     acceleration-exponent = <2>;
 };
 
@@ -48,6 +48,40 @@
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
         tap-ms = <100>;
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        L2-3U {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <17 3>;
+        };
+
+        R2-3U {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <23 9>;
+        };
+
+        L2-4 {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <17 14>;
+        };
+
+        R2-4 {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <23 26>;
+        };
+
+        R2-L2 {
+            bindings = <&kp SQT>;
+            key-positions = <17 23>;
+        };
+
+        R3-L3 {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <16 24>;
+        };
     };
 
     keymap {
@@ -105,10 +139,10 @@
 
         sym {
             bindings = <
-&trans  &trans  &kp LS(RBRC)  &kp LS(LBRC)  &trans     &trans                    &trans          &trans      &kp LS(EXCL)   &kp SQT      &kp GRAVE      &trans    &trans
-&trans  &trans  &kp LS(RPAR)  &kp LS(LPAR)  &kp LSHFT  &trans            &trans  &trans  &trans  &kp LS(LT)  &kp MINUS      &kp EQUAL    &kp LS(GT)     &kp SEMI  &trans
-&trans  &trans  &kp RBKT      &kp LBKT      &trans     &trans  &trans            &trans          &trans      &kp LS(UNDER)  &kp LS(DQT)  &kp LS(QMARK)  &kp BSLH  &trans
-                              &trans        &trans     &trans                                    &trans      &trans         &trans
+&trans  &trans  &kp RIGHT_BRACE        &kp LEFT_BRACE        &trans     &trans                    &trans          &trans         &kp EXCLAMATION  &kp SQT            &kp GRAVE         &trans    &trans
+&trans  &trans  &kp RIGHT_PARENTHESIS  &kp LEFT_PARENTHESIS  &kp LSHFT  &trans            &trans  &trans  &trans  &kp LESS_THAN  &kp MINUS        &kp EQUAL          &kp GREATER_THAN  &kp SEMI  &trans
+&trans  &trans  &kp RBKT               &kp LBKT              &trans     &trans  &trans            &trans          &trans         &kp UNDERSCORE   &kp DOUBLE_QUOTES  &kp QUESTION      &kp BSLH  &trans
+                                       &trans                &trans     &trans                                    &trans         &trans           &trans
             >;
         };
 
