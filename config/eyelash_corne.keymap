@@ -24,7 +24,10 @@
     acceleration-exponent = <2>;
 };
 
-&mt { flavor = "tap-preferred"; };
+&mt {
+    flavor = "tap-preferred";
+    quick-tap-ms = <150>;
+};
 
 / {
     behaviors {
