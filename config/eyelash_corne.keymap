@@ -94,12 +94,6 @@
             key-positions = <16 24>;
             layers = <0>;
         };
-
-        L1-D {
-            bindings = <&caps_word>;
-            key-positions = <43 44>;
-            layers = <0>;
-        };
     };
 
     keymap {
