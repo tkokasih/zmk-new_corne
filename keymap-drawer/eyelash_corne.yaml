@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
-  QWERTY:
+  colemak:
   - $$mdi:keyboard-esc$$
   - Q
   - W
@@ -16,7 +16,7 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-command$$
   - A
-  - {t: R, h: Fn}
+  - {t: R, h: num}
   - {t: S, h: sym}
   - T
   - D
@@ -26,7 +26,7 @@ layers:
   - H
   - N
   - {t: E, h: sym}
-  - {t: I, h: Fn}
+  - {t: I, h: num}
   - O
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-control$$
@@ -43,13 +43,13 @@ layers:
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '>'}
   - {t: /, h: '$$mdi:apple-keyboard-control$$', s: '?'}
   - $$mdi:keyboard-esc$$
-  - {t: '$$mdi:backspace$$', h: SYMBOL}
-  - NUMBER
+  - {t: '$$mdi:backspace$$', h: nav}
+  - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:keyboard-tab$$', h: fn}
-  - {t: '$$mdi:keyboard-return$$', h: Fn}
-  - {t: '$$mdi:keyboard-space$$', h: NUMBER}
-  - {t: '$$mdi:keyboard-esc$$', h: Fn}
-  NUMBER:
+  - {t: '$$mdi:keyboard-return$$', h: num}
+  - {t: '$$mdi:keyboard-space$$', h: mouse}
+  - {t: '$$mdi:keyboard-esc$$', h: num}
+  mouse:
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -93,12 +93,12 @@ layers:
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - INS
-  - {t: '$$mdi:backspace-reverse-outline$$', type: held alternate}
+  - {t: '$$mdi:backspace-reverse-outline$$', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  SYMBOL:
+  nav:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-esc$$
@@ -147,7 +147,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  Fn:
+  num:
   - '&studio_unlock'
   - F1
   - F2
