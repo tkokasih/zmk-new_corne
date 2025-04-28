@@ -20,9 +20,10 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <500>;
+    time-to-max-speed-ms = <60>;
     acceleration-exponent = <1>;
-    trigger-period-ms = <16>;
+    trigger-period-ms = <20>;
+    delay-ms = <0>;
 };
 
 / {
@@ -53,12 +54,12 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "QWERTY";
+            display-name = "colemak";
             bindings = <
 &kp ESC       &kp Q               &kp W           &kp F            &kp P             &kp G                             &kp UP                &kp J        &kp L              &kp U                &kp Y              &kp SEMI                 &kp BSPC
 &kp LEFT_GUI  &kp A               &lt 3 R         &lt 4 S          &kp T             &kp D                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp N              &lt 4 E              &lt 3 I            &kp O                    &kp SQT
 &kp LCTRL     &mt LEFT_CONTROL Z  &mt LEFT_ALT X  &mt LEFT_GUI C   &mt LEFT_SHIFT V  &kp B      &kp SPACE              &kp DOWN              &kp K        &mt RIGHT_SHIFT M  &mt RIGHT_GUI COMMA  &mt RIGHT_ALT DOT  &mt RIGHT_CONTROL SLASH  &kp ESC
-                                                  &lt 2 BACKSPACE  &mo 1             &lt 5 TAB                                               &lt 3 ENTER  &lt 1 SPACE        &lt 3 ESC
+                                                  &lt 2 BACKSPACE  &kp LSHIFT        &lt 5 TAB                                               &lt 3 ENTER  &lt 1 SPACE        &lt 3 ESC
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -67,7 +68,7 @@
         };
 
         mouse {
-            display-name = "NUMBER";
+            display-name = "mouse";
             bindings = <
 &bt BT_SEL 1  &none            &none           &mmv MOVE_UP    &none            &none                                          &mmv MOVE_UP                     &trans           &none            &none            &none            &none      &trans
 &trans        &none            &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &mmv MOVE_LEFT   &msc SCRL_DOWN   &msc SCRL_UP     &mmv MOVE_RIGHT  &mkp LCLK  &trans
@@ -79,7 +80,7 @@
         };
 
         nav {
-            display-name = "SYMBOL";
+            display-name = "nav";
             bindings = <
 &trans  &trans  &kp ESC  &trans  &trans  &trans                             &mmv MOVE_UP                     &kp ESC   &kp BSPC   &kp ESC    &kp DEL    &kp ESC      &trans
 &trans  &trans  &trans   &trans  &trans  &kp TAB            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp TAB      &trans
@@ -91,7 +92,7 @@
         };
 
         num {
-            display-name = "Fn";
+            display-name = "num";
             bindings = <
 &studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
 &trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
