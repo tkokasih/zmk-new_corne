@@ -119,10 +119,10 @@
         nav {
             display-name = "nav";
             bindings = <
-&bootloader  &trans  &kp ESC  &trans  &trans  &trans                                 &mmv MOVE_UP                     &kp ESC   &kp BSPC   &kp ESC    &kp DEL    &kp ESC      &trans
-&trans       &trans  &trans   &trans  &trans  &kp TAB                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp TAB      &trans
-&trans       &trans  &trans   &trans  &trans  &trans       &trans                    &mmv MOVE_DOWN                   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp LS(TAB)  &trans
-                              &trans  &trans  &bootloader                                                             &kp RET   &trans     &trans
+&bootloader  &trans            &kp ESC       &trans        &trans          &trans                                 &mmv MOVE_UP                     &kp ESC   &kp BSPC   &kp ESC    &kp DEL    &kp ESC      &trans
+&trans       &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_SHIFT  &kp TAB                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp TAB      &trans
+&trans       &trans            &trans        &trans        &trans          &trans       &trans                    &mmv MOVE_DOWN                   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp LS(TAB)  &trans
+                                             &trans        &trans          &bootloader                                                             &kp RET   &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -151,10 +151,10 @@
 
         fn {
             bindings = <
-&bootloader  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                             &trans  &trans  &trans                                    &trans  &trans  &trans
+&bootloader  &trans     &trans    &trans    &trans     &trans                    &trans          &trans   &kp F7  &kp F8  &kp F9  &trans   &trans
+&trans       &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &trans            &trans  &trans  &trans  &kp F10  &kp F4  &kp F5  &kp F6  &kp F11  &trans
+&trans       &trans     &trans    &trans    &trans     &trans  &trans            &trans          &trans   &kp F1  &kp F2  &kp F3  &trans   &trans
+                                  &trans    &trans     &trans                                    &kp F12  &trans  &trans
             >;
         };
     };
