@@ -32,13 +32,52 @@
 
 &caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>; };
 
+&lt { quick-tap-ms = <150>; };
+
 / {
     behaviors {
-        td0: td0 {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+        bt_1: bt_recon {
+            compatible = "zmk,behavior-hold-tap";
+            label = "bt_1";
+            bindings = <&BT_RECON_1>, <&BT_SEL_1>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
+
+        bt_2: bt_2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BT_2";
+            bindings = <&BT_RECON_2>, <&BT_SEL_2>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
+
+        bt_3: bt_3 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BT_3";
+            bindings = <&BT_RECON_3>, <&BT_SEL_3>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
+
+        bt_4: bt_4 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BT_4";
+            bindings = <&BT_RECON_4>, <&BT_SEL_4>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -96,6 +135,64 @@
         };
     };
 
+    macros {
+        BT_RECON_1: BT_RECON_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &bt BT_CLR>;
+            label = "BT_RECON_1";
+        };
+
+        BT_RECON_2: BT_RECON_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2 &bt BT_CLR>;
+            label = "BT_RECON_2";
+        };
+
+        BT_RECON_3: BT_RECON_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3 &bt BT_CLR>;
+            label = "BT_RECON_3";
+        };
+
+        BT_RECON_4: BT_RECON_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4 &bt BT_CLR>;
+            label = "BT_RECON_4";
+        };
+
+        BT_SEL_1: BT_SEL_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1>;
+            label = "BT_SEL_1";
+        };
+
+        BT_SEL_2: BT_SEL_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2>;
+            label = "BT_SEL_2";
+        };
+
+        BT_SEL_3: BT_SEL_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3>;
+            label = "BT_SEL_3";
+        };
+
+        BT_SEL_4: BT_SEL_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4>;
+            label = "BT_SEL_4";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -128,10 +225,10 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans  &trans            &kp ESC       &trans        &out OUT_USB    &bt BT_SEL 1                    &trans          &kp ESC   &kp BSPC   &kp ESC    &kp DEL    &kp ESC      &trans
-&trans  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_SHIFT  &bt BT_SEL 2            &trans  &trans  &trans  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp TAB      &trans
-&trans  &trans            &trans        &trans        &out OUT_BLE    &bt BT_SEL 3  &trans            &trans          &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp LS(TAB)  &trans
-                                        &trans        &trans          &bootloader                                     &kp RET   &trans     &trans
+&trans  &trans            &kp ESC       &trans        &out OUT_USB    &bt_1 0 0                      &trans          &kp ESC   &kp BSPC   &kp ESC    &kp DEL    &kp ESC      &trans
+&trans  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_SHIFT  &bt_2 0 0              &trans  &trans  &trans  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp TAB      &trans
+&trans  &trans            &trans        &trans        &out OUT_BLE    &bt_3 0 0    &trans            &trans          &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp LS(TAB)  &trans
+                                        &trans        &trans          &bootloader                                    &kp RET   &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -170,10 +267,10 @@
         paren {
             display-name = "num";
             bindings = <
-&trans  &trans  &kp RIGHT_BRACE        &kp LEFT_BRACE        &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp RIGHT_PARENTHESIS  &kp LEFT_PARENTHESIS  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp RIGHT_BRACKET      &kp LEFT_BRACKET      &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                       &trans                &trans  &trans                                    &trans  &trans  &trans
+&none  &none  &kp RIGHT_BRACE        &kp LEFT_BRACE        &none  &none                  &none         &none  &none  &none  &none  &none  &none
+&none  &none  &kp RIGHT_PARENTHESIS  &kp LEFT_PARENTHESIS  &none  &none           &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &kp RIGHT_BRACKET      &kp LEFT_BRACKET      &none  &none  &none           &none         &none  &none  &none  &none  &none  &none
+                                     &none                 &none  &none                                &none  &none  &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
