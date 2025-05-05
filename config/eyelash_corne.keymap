@@ -265,7 +265,7 @@
         };
 
         paren {
-            display-name = "num";
+            display-name = "paren";
             bindings = <
 &none  &none  &kp RIGHT_BRACE        &kp LEFT_BRACE        &none  &none                  &none         &none  &none  &none  &none  &none  &none
 &none  &none  &kp RIGHT_PARENTHESIS  &kp LEFT_PARENTHESIS  &none  &none           &none  &none  &none  &none  &none  &none  &none  &none  &none
