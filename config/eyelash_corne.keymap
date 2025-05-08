@@ -133,6 +133,16 @@
             key-positions = <16 24>;
             layers = <0>;
         };
+
+        L34 {
+            bindings = <&kp Q>;
+            key-positions = <14 15>;
+        };
+
+        L4D {
+            bindings = <&kp Q>;
+            key-positions = <14 29>;
+        };
     };
 
     macros {
@@ -248,10 +258,10 @@
 
         sym {
             bindings = <
-&trans  &trans          &kp LEFT_PARENTHESIS  &kp STAR     &kp AMPERSAND    &trans                    &trans          &trans         &kp EXCLAMATION  &kp SQT            &kp GRAVE         &trans    &trans
-&trans  &kp UNDERSCORE  &kp CARET             &kp PERCENT  &kp DOLLAR       &trans            &trans  &trans  &trans  &kp LESS_THAN  &kp MINUS        &kp EQUAL          &kp GREATER_THAN  &kp SEMI  &trans
-&trans  &trans          &kp HASH              &kp AT_SIGN  &kp EXCLAMATION  &trans  &trans            &trans          &trans         &kp UNDERSCORE   &kp DOUBLE_QUOTES  &kp QUESTION      &kp BSLH  &trans
-                                              &trans       &trans           &trans                                    &trans         &trans           &trans
+&trans  &trans          &kp LEFT_PARENTHESIS  &kp STAR     &kp AMPERSAND    &trans                            &trans          &trans         &kp EXCLAMATION  &kp SQT            &kp GRAVE         &trans    &trans
+&trans  &kp UNDERSCORE  &kp CARET             &kp PERCENT  &kp DOLLAR       &kp LEFT_SHIFT            &trans  &trans  &trans  &kp LESS_THAN  &kp MINUS        &kp EQUAL          &kp GREATER_THAN  &kp SEMI  &trans
+&trans  &trans          &kp HASH              &kp AT_SIGN  &kp EXCLAMATION  &trans          &trans            &trans          &trans         &kp UNDERSCORE   &kp DOUBLE_QUOTES  &kp QUESTION      &kp BSLH  &trans
+                                              &trans       &trans           &trans                                            &trans         &trans           &trans
             >;
         };
 
