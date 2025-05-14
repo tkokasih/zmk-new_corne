@@ -364,5 +364,13 @@ combos:
   l: [colemak]
 - p: [14, 15]
   k: Q
+  l: [colemak]
 - p: [14, 29]
   k: Q
+  l: [colemak]
+- p: [42, 43, 44]
+  k: $$mdi:progress-download$$
+  l: [colemak]
+- p: [45, 46, 47]
+  k: $$mdi:progress-download$$
+  l: [colemak]
