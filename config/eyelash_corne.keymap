@@ -223,10 +223,10 @@
         mouse {
             display-name = "mouse";
             bindings = <
-&bt BT_SEL 1  &none   &none           &mmv MOVE_UP    &none            &none                                          &kp C_VOLUME_UP                &trans           &none            &none            &mkp RCLK        &none      &trans
-&trans        &none   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &bt BT_SEL 3                   &kp C_PREVIOUS  &kp K_MUTE         &kp C_NEXT  &mmv MOVE_LEFT   &msc SCRL_DOWN   &msc SCRL_UP     &mmv MOVE_RIGHT  &mkp LCLK  &trans
-&trans        &trans  &trans          &trans          &trans           &rgb_ug RGB_EFF  &kp C_MUTE                    &kp C_VOLUME_DOWN              &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &mkp RCLK  &trans
-                                      &trans          &trans           &trans                                                                        &kp INS          &none            &trans
+&trans  &none   &none           &mmv MOVE_UP    &none            &trans                                &kp C_VOLUME_UP                &trans           &none            &none            &mkp RCLK        &none      &trans
+&trans  &none   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans                &kp C_PREVIOUS  &kp K_MUTE         &kp C_NEXT  &mmv MOVE_LEFT   &msc SCRL_DOWN   &msc SCRL_UP     &mmv MOVE_RIGHT  &mkp LCLK  &trans
+&trans  &trans  &trans          &trans          &trans           &trans  &kp C_MUTE                    &kp C_VOLUME_DOWN              &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &mkp RCLK  &trans
+                                &trans          &trans           &trans                                                               &kp INS          &none            &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -235,10 +235,10 @@
         nav {
             display-name = "nav";
             bindings = <
-&trans  &trans            &kp K_CONTEXT_MENU  &kp ESCAPE    &out OUT_USB    &bt_1 0 0                      &trans          &kp ESC   &kp BSPC   &kp ESC    &kp DEL    &kp ESC      &trans
+&trans  &trans            &kp K_CONTEXT_MENU  &kp ESCAPE    &out OUT_USB    &bt_1 0 0                      &trans          &trans    &kp BSPC   &kp ESC    &kp DEL    &trans       &trans
 &trans  &kp LEFT_CONTROL  &kp LEFT_ALT        &kp LEFT_WIN  &kp LEFT_SHIFT  &bt_2 0 0              &trans  &trans  &trans  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp TAB      &trans
 &trans  &trans            &trans              &trans        &out OUT_BLE    &bt_3 0 0    &trans            &trans          &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp LS(TAB)  &trans
-                                              &trans        &trans          &bootloader                                    &kp RET   &trans     &trans
+                                              &trans        &trans          &bootloader                                    &trans    &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -247,10 +247,10 @@
         num {
             display-name = "num";
             bindings = <
-&trans  &trans            &trans        &trans        &trans          &none                         &trans          &kp PLUS   &kp N7        &kp N8  &kp N9  &none    &bootloader
-&trans  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &none                 &trans  &trans  &trans  &kp MINUS  &kp N4        &kp N5  &kp N6  &kp DOT  &none
-&trans  &trans            &trans        &trans        &trans          &none   &kp C_MUTE            &trans          &kp MINUS  &kp N1        &kp N2  &kp N3  &kp N0   &none
-                                        &trans        &trans          &trans                                        &none      &kp NUMBER_0  &none
+&trans  &trans            &trans        &trans        &trans          &trans                        &trans          &kp PLUS   &kp N7        &kp N8  &kp N9  &trans   &bootloader
+&trans  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &trans                &trans  &trans  &trans  &kp MINUS  &kp N4        &kp N5  &kp N6  &kp DOT  &kp BACKSPACE
+&trans  &trans            &trans        &trans        &trans          &trans  &kp C_MUTE            &trans          &kp MINUS  &kp N1        &kp N2  &kp N3  &kp N0   &trans
+                                        &trans        &trans          &trans                                        &trans     &kp NUMBER_0  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
