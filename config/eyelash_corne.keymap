@@ -137,11 +137,25 @@
         L34 {
             bindings = <&kp Q>;
             key-positions = <14 15>;
+            layers = <0>;
         };
 
         L4D {
             bindings = <&kp Q>;
             key-positions = <14 29>;
+            layers = <0>;
+        };
+
+        L0LR {
+            bindings = <&bootloader>;
+            key-positions = <42 43 44>;
+            layers = <0>;
+        };
+
+        R0LR {
+            bindings = <&bootloader>;
+            key-positions = <45 46 47>;
+            layers = <0>;
         };
     };
 
