@@ -250,7 +250,7 @@
             display-name = "nav";
             bindings = <
 &bt BT_CLR  &trans            &kp K_CONTEXT_MENU  &kp ESCAPE    &out OUT_USB    &bt_1 0 0                      &trans          &trans    &kp BSPC   &kp ESC    &kp DEL    &trans       &trans
-&trans      &kp LEFT_CONTROL  &kp LEFT_ALT        &kp LEFT_WIN  &kp LEFT_SHIFT  &bt_2 0 0              &trans  &trans  &trans  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp TAB      &trans
+&kp ENTER   &kp LEFT_CONTROL  &kp LEFT_ALT        &kp LEFT_WIN  &kp LEFT_SHIFT  &bt_2 0 0              &trans  &trans  &trans  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp TAB      &trans
 &trans      &trans            &trans              &trans        &out OUT_BLE    &bt_3 0 0    &trans            &trans          &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp LS(TAB)  &trans
                                                   &trans        &bt_4 0 0       &bootloader                                    &trans    &trans     &trans
             >;
