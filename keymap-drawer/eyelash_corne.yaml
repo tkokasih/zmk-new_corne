@@ -126,7 +126,7 @@ layers:
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
   - $$mdi:keyboard-tab$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+Gui+$$mdi:arrow-right-bold$$
   - Ctl+Gui+$$mdi:arrow-right-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
